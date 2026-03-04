@@ -3,6 +3,22 @@ import * as fse from "fs-extra";
 import * as path from "path";
 import { Demopage } from "webpage-templates";
 
+// Workaround: ejs 3.x strips leading '/' from absolute include paths before
+// passing them to resolveInclude, breaking webpage-templates on unix systems.
+// We patch the ejs instance used by webpage-templates to restore the slash.
+{
+    const ejsPath = require.resolve("ejs", { paths: [path.dirname(require.resolve("webpage-templates"))] });
+    const ejs = require(ejsPath); // eslint-disable-line @typescript-eslint/no-var-requires
+    const origResolveInclude = ejs.resolveInclude;
+    ejs.resolveInclude = function (name: string, ...args: unknown[]) {
+        // If the path looks like an absolute unix path with the leading '/' stripped
+        // (e.g. "Users/foo/..." instead of "/Users/foo/..."), restore it.
+        if (process.platform !== "win32" && !name.startsWith("/") && fs.existsSync("/" + name)) {
+            name = "/" + name;
+        }
+        return origResolveInclude.call(this, name, ...args);
+    };
+}
 
 const data = {
     title: "Non-circular gears",
