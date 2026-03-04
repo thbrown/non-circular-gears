@@ -18,7 +18,9 @@ const data = {
         branchName: "main"
     },
     additionalLinks: [],
-    styleFiles: [],
+    styleFiles: [
+        "css/custom.css",
+    ],
     scriptFiles: [
         "script/jsvaluenoise.min.js",
         "script/main.min.js"
@@ -172,10 +174,10 @@ const data = {
                     type: Demopage.supportedControls.Range,
                     title: "Scale factor",
                     id: "scale-factor-range-id",
-                    min: 100,
-                    max: 2000,
-                    value: 500,
-                    step: 50,
+                    min: 10,
+                    max: 200,
+                    value: 50,
+                    step: 5,
                 },
                 {
                     type: Demopage.supportedControls.Range,
