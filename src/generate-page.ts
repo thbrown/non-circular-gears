@@ -191,9 +191,9 @@ const data = {
                     title: "Scale factor",
                     id: "scale-factor-range-id",
                     min: 10,
-                    max: 200,
-                    value: 50,
-                    step: 5,
+                    max: 800,
+                    value: 250,
+                    step: 10,
                 },
                 {
                     type: Demopage.supportedControls.Range,
