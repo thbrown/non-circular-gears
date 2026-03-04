@@ -170,7 +170,7 @@ abstract class Scene {
         return newGear;
     }
 
-    protected get allGears(): Gear[] {
+    public get allGears(): Gear[] {
         return [this.mainGear, ...this.secondaryGears];
     }
 

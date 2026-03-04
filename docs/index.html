@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" href="favicons/favicon-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="favicons/apple-touch-icon-120x120-precomposed.png" sizes="120x120">
     <link rel="apple-touch-icon" href="favicons/apple-touch-icon-152x152-precomposed.png" sizes="152x152">
-    <link rel="stylesheet" type="text/css" href="css/page.css?v=2024-02-10T19%3A26%3A45.518Z">
+    <link rel="stylesheet" type="text/css" href="css/page.css?v=2026-03-04T08%3A08%3A59.689Z">
   </head>
 
   <body>
@@ -176,6 +176,304 @@
               </div>
             </div>
           </section>
+          <hr />
+          <section class="controls-section">
+            <h2>3D Export</h2>
+
+            <div class="controls-list">
+              <div class="control" id="control-gear-thickness-range-id">
+                <label>Gear thickness (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="1" max="20" value="5" step="0.5" class="slider" id="gear-thickness-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="gear-thickness-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-scale-factor-range-id">
+                <label>Scale factor:</label>
+                <div class="range-container">
+                  <input type="range" min="100" max="2000" value="500" step="50" class="slider" id="scale-factor-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="scale-factor-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-peg-diameter-range-id">
+                <label>Peg diameter (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="2" max="15" value="5" step="0.5" class="slider" id="peg-diameter-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="peg-diameter-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-hole-clearance-range-id">
+                <label>Hole clearance (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="0" max="1" value="0.3" step="0.05" class="slider" id="hole-clearance-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="hole-clearance-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-snap-head-overhang-range-id">
+                <label>Snap head overhang (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="0.1" max="1.5" value="0.4" step="0.05" class="slider" id="snap-head-overhang-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="snap-head-overhang-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-snap-head-height-range-id">
+                <label>Snap head height (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="0.5" max="3" value="1.5" step="0.1" class="slider" id="snap-head-height-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="snap-head-height-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-slit-count-range-id">
+                <label>Slit count:</label>
+                <div class="range-container">
+                  <input type="range" min="2" max="6" value="4" step="1" class="slider" id="slit-count-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="slit-count-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-slit-width-range-id">
+                <label>Slit width (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="0.3" max="2" value="0.8" step="0.1" class="slider" id="slit-width-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="slit-width-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-slit-depth-range-id">
+                <label>Slit depth (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="1" max="8" value="3" step="0.5" class="slider" id="slit-depth-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="slit-depth-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-chamfer-depth-range-id">
+                <label>Chamfer depth (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="0.3" max="2" value="1" step="0.1" class="slider" id="chamfer-depth-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="chamfer-depth-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-board-thickness-range-id">
+                <label>Board thickness (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="1" max="10" value="3" step="0.5" class="slider" id="board-thickness-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="board-thickness-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-board-margin-range-id">
+                <label>Board margin (mm):</label>
+                <div class="range-container">
+                  <input type="range" min="2" max="30" value="10" step="1" class="slider" id="board-margin-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="board-margin-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-download-stl-button">
+                <button class="button  flat" id="download-stl-button">Download STL (ZIP)</button>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
@@ -206,13 +504,13 @@
     <script type="text/javascript">
       var Page = Page || {};
       Object.defineProperty(Page, "version", {
-        value: "2024-02-10T19%3A26%3A45.518Z",
+        value: "2026-03-04T08%3A08%3A59.689Z",
         writable: false,
       });
     </script>
-    <script src="script/page.min.js?v=2024-02-10T19%3A26%3A45.518Z"></script>
-    <script src="script/jsvaluenoise.min.js?v=2024-02-10T19%3A26%3A45.518Z"></script>
-    <script src="script/main.min.js?v=2024-02-10T19%3A26%3A45.518Z"></script>
+    <script src="script/page.min.js?v=2026-03-04T08%3A08%3A59.689Z"></script>
+    <script src="script/jsvaluenoise.min.js?v=2026-03-04T08%3A08%3A59.689Z"></script>
+    <script src="script/main.min.js?v=2026-03-04T08%3A08%3A59.689Z"></script>
   </body>
 
 </html>

@@ -18,6 +18,7 @@
     "node": ">=20.5.1"
   },
   "devDependencies": {
+    "@types/earcut": "^3.0.0",
     "@types/fs-extra": "^11.0.4",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -31,5 +32,10 @@
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4",
     "webpage-templates": "github:piellardj/webpage-templates"
+  },
+  "dependencies": {
+    "earcut": "^3.0.2",
+    "ejs": "^2.7.4",
+    "jszip": "^3.10.1"
   }
 }

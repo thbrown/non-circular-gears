@@ -160,7 +160,7 @@ class Gear {
     private constructor(
         public readonly center: ReadonlyPoint,
         periodRays: ReadonlyArray<Ray>,
-        private readonly periodsCount: number,
+        public readonly periodsCount: number,
         private readonly orientation: number,
         private readonly parent: Gear | null) {
         let minRadius = 10000000000;
@@ -389,6 +389,26 @@ class Gear {
             i += stepSize;
         }
         return points;
+    }
+
+    public buildOutlinePoints(idealToothSize?: number): Point[] {
+        const periodPoints = idealToothSize
+            ? this.buildPeriodPointsWithTeeth(idealToothSize)
+            : this.buildPeriodPointsSmooth();
+
+        const allPoints: Point[] = [];
+        for (let iP = 0; iP < this.periodsCount; iP++) {
+            const periodStartingAngle = this.orientation * iP * this.periodAngle;
+            const cos = Math.cos(periodStartingAngle);
+            const sin = Math.sin(periodStartingAngle);
+
+            for (const point of periodPoints) {
+                const x = cos * point.x - sin * point.y;
+                const y = sin * point.x + cos * point.y;
+                allPoints.push({ x, y });
+            }
+        }
+        return allPoints;
     }
 
     private buildSvgPath(pointsForPeriod: Point[]): string {
